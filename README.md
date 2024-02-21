@@ -19,7 +19,11 @@ Here is a link to my portfolio where you can play the mini game in full:
 ## Enemy AI/ Finite State Machine
 
 ### Patroll State
-There is a current state that is a variable that helps switch in between the states but the patroll state is the default state that the enemy AI begins in when you first encounter it.
+The currentState variable plays a pivotal role in the enemy AI's decision-making process, acting as the switchboard between various behavioral states. By default, the AI begins in a Patrolling state upon the player's first encounter with it. This state represents the AI's routine behavior, where it navigates through predefined waypoints or wanders within a designated area.
+
+As the game progresses and the player interacts with the AI, the currentState can transition to other states such as Chasing, Attacking, or Death based on the situation. For example, if the player comes within a certain proximity to the enemy, detected by the chaseTriggerDistance, the AI shifts from Patrolling to Chasing, signifying a change in behavior as it actively pursues the player.
+
+This state-switching mechanism is facilitated by a series of conditional checks within the AI's update loop, with transitions triggered by specific game events or conditions being met. The default Patrolling state ensures that the enemy exhibits autonomous behavior, providing a dynamic and engaging experience from the outset of the encounter.
 
 ![PatrollingState](https://github.com/JeremyMarkWilcox/Unity-C-Sharp-Code-Summary/assets/150622088/c547acd4-f892-4031-8929-7baf623e33c2)
 
