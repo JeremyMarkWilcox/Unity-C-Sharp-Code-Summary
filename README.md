@@ -27,6 +27,51 @@ Close Proximity: Switches to Attacking to engage the player upon getting close e
 Taking Damage: Handles taking damage and triggers the Death state upon health depletion, leading to an explosion effect and the enemy's destruction.
 Utilizing Unity's physics and asynchronous programming, the FSM enhances gameplay with adaptive and challenging enemy behaviors. Each state is modular, encapsulated in its own script for clarity and ease of modification.
 
+```
+ public void Update()
+ {
+     switch (currentState)
+     {
+         case State.Patrolling:
+             patrollingState.UpdateState();
+             if (Vector2.Distance(transform.position, JW_Hero_ShipTransform.position) <= chaseTriggerDistance)
+             {
+                 StartChasing();
+             }
+             break;
+
+         case State.Chasing:
+             chasingState.SetTarget(JW_Hero_ShipTransform);
+             chasingState.UpdateState();
+             if (Vector2.Distance(transform.position, JW_Hero_ShipTransform.position) < chasingState.maintainDistance)
+             {
+                 StartAttacking();
+             }
+             break;
+
+         case State.Attacking:
+             rb.velocity = Vector2.zero;
+             Vector2 directionToTarget = ((Vector2)JW_Hero_ShipTransform.position - (Vector2)transform.position).normalized;
+             float angle = Mathf.Atan2(directionToTarget.y, directionToTarget.x) * Mathf.Rad2Deg;
+             transform.rotation = Quaternion.AngleAxis(angle - -90f, Vector3.forward);
+             attackState.UpdateState(JW_Hero_ShipTransform.position);
+
+             if (Vector2.Distance(transform.position, JW_Hero_ShipTransform.position) >= chasingState.maintainDistance)
+             {
+                 currentState = State.Chasing;
+             }
+             if (isExploding)
+             {
+                 StartDeath();
+             }
+             break;
+
+         case State.Death:
+
+             break;
+     }
+ }
+```
 ### Patroll State
 The currentState variable plays a pivotal role in the enemy AI's decision-making process, acting as the switchboard between various behavioral states. By default, the AI begins in a Patrolling state upon the player's first encounter with it. This state represents the AI's routine behavior, where it navigates through predefined waypoints or wanders within a designated area.
 
