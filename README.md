@@ -18,6 +18,9 @@ Here is a link to my portfolio where you can play the mini game in full:
 
 ## Enemy AI/ Finite State Machine
 
+### Patroll State
+There is a current state that is a variable that helps switch in between the states but the patroll state is the default state that the enemy AI begins in when you first encounter it.
+
 ![PatrollingState](https://github.com/JeremyMarkWilcox/Unity-C-Sharp-Code-Summary/assets/150622088/c547acd4-f892-4031-8929-7baf623e33c2)
 
 ## Meteors
