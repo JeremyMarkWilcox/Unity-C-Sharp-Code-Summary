@@ -27,6 +27,69 @@ This state-switching mechanism is facilitated by a series of conditional checks 
 
 ![PatrollingState](https://github.com/JeremyMarkWilcox/Unity-C-Sharp-Code-Summary/assets/150622088/c547acd4-f892-4031-8929-7baf623e33c2)
 
+```
+using UnityEngine;
+
+public class EnemyPatrollingState : MonoBehaviour
+{
+    private EnemyAI enemyAI;
+
+    public Transform[] waypoints;
+    private int currentWaypointIndex = 0;
+
+    private void Start()
+    {
+        enemyAI = GetComponent<EnemyAI>();
+    }
+
+    public void Enter()
+    {
+        GoToNextWaypoint();
+    }
+
+    public void UpdateState()
+    {
+        if (ReachedWaypoint())
+        {
+            GoToNextWaypoint();
+        }
+        else
+        {
+            MoveTowardsWaypoint();
+        }
+    }
+
+    private bool ReachedWaypoint()
+    {
+        float distance = Vector2.Distance(transform.position, waypoints[currentWaypointIndex].position);
+        return distance < 0.1f;
+    }
+
+    private void GoToNextWaypoint()
+    {
+        currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
+    }
+
+    private void MoveTowardsWaypoint()
+    {
+        Vector2 targetPosition = waypoints[currentWaypointIndex].position;
+        Vector2 currentPosition = transform.position;
+        Vector2 direction = (targetPosition - currentPosition).normalized;
+
+        enemyAI.Move(direction);
+    }
+}
+```
+
+
+
+
+
+
+
+
+
+
 ## Meteors
 
 ## Player Ship
