@@ -9,6 +9,11 @@ Designing my own video game was an invaluable opportunity to explore Unity's gam
 
 Enclosed are snippets from my code contributions, with the complete codebase accessible in the accompanying files.
 
+## Play On My Personal Website
+
+Here is a link to my portfolio where you can play the mini game in full:
+
+
 ## Game Scenes
 
 ## Player Ship
