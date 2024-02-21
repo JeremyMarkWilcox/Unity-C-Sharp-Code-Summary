@@ -1,5 +1,5 @@
-# Unity/ C# Code Summary
- A 2D game created with the Unity Engine, written in C#
+# Unity/ C# Code Summary On Live Project
+I created an upgraded 2D version of Space Invaders with the Unity Engine, written in C#
 
 
 ## Game Scenes
