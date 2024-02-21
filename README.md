@@ -16,15 +16,15 @@ Here is a link to my portfolio where you can play the mini game in full:
 
 ## Game Scenes
 
-## Player Ship
-
 ## Enemy AI/ Finite State Machine
+
+![PatrollingState](https://github.com/JeremyMarkWilcox/Unity-C-Sharp-Code-Summary/assets/150622088/c547acd4-f892-4031-8929-7baf623e33c2)
 
 ## Meteors
 
-## UI
+## Player Ship
 
-![PatrollingState](https://github.com/JeremyMarkWilcox/Unity-C-Sharp-Code-Summary/assets/150622088/c547acd4-f892-4031-8929-7baf623e33c2)
+
 
 
 
