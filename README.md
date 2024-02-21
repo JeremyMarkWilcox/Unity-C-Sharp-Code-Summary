@@ -2,25 +2,18 @@
  A 2D game created with the Unity Engine, written in C#
 
 
-## Game Screens
+## Game Scenes
+
+## Player Ship
+
+## Enemy AI/ Finite State Machine
+
+## Meteors
+
+## UI
 
 
 
 
-## Game Movement
 
-
-
-
-## Enemy Movement/ Spawning
-
-
-
-
-## Score
-
-
-
-
-## Units Customized 
 
