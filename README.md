@@ -321,6 +321,8 @@ public class EnemyAttackState : MonoBehaviour
 
 ## Death State
 
+![DeathState](https://github.com/JeremyMarkWilcox/Unity-C-Sharp-Code-Summary/assets/150622088/36d381d2-8ed3-490f-8700-3b71ad59d330)
+
 The Death state, as encapsulated within the StartDeath, Explode, and DestroyGameObject methods of the enemy AI system, signifies the final phase in the enemy's lifecycle. This state is triggered when the enemy's health reaches zero, leading to a sequence of events culminating in the enemy's removal from the game. It is included in the AI Script because it is very brief. The main reason I created the state was because I realized all of the code I had been writing to prevent the other states from triggering such as attacking. This shuts it all down and the poor Enemy AI can die in peace.
 
 ```
