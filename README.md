@@ -13,6 +13,28 @@ Enclosed are snippets from my code contributions, with the complete codebase acc
 
 Here is a link to my portfolio where you can play the mini game in full:
 
+https://www.jeremy-wilcox.com/
+
+## Skills Aqcuired:
+
+1. Advanced C# and Object-Oriented Programming: Proficiency in using classes, inheritance, polymorphism, and interfaces to organize and manage game entities and behaviors efficiently.
+
+2. Unity Engine Mastery: Comprehensive understanding of Unity's core features, including physics, animations, particle systems, UI, and scene management, to create immersive gameplay experiences.
+
+3. Gameplay Mechanics Implementation: Skill in developing complex gameplay mechanics, such as finite state machines for AI behavior, pathfinding, player controls, and projectile dynamics.
+
+4. AI Development: Ability to design intelligent and adaptive enemy behavior using AI techniques, enabling dynamic interactions and challenges within the game environment.
+
+5. Debugging and Performance Optimization: Competence in identifying and resolving bugs, along with optimizing game performance to ensure smooth and responsive gameplay.
+
+6. Version Control with Git: Familiarity with using Git for source code management, facilitating team collaboration, and efficiently handling project iterations.
+
+7. Agile/Scrum Methodologies: Experience in applying Agile principles and Scrum practices to game development, enhancing team collaboration, project planning, and delivery processes.
+
+8. Creative Game Design: Skills in level design, challenge creation, and balancing game mechanics to craft engaging and enjoyable player experiences.
+
+9. Project Management: Demonstrated ability to manage development timelines, prioritize tasks, and iterate on game features based on feedback or testing results.
+    
 ## Enemy AI/ Finite State Machine
 
 ![EnemyAI](https://github.com/JeremyMarkWilcox/Unity-C-Sharp-Code-Summary/assets/150622088/7d8ded98-20b3-44ed-81fe-451b4ea68919)
