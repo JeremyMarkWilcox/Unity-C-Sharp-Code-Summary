@@ -70,11 +70,28 @@ Utilizing Unity's physics and asynchronous programming, the FSM enhances gamepla
  }
 ```
 ## Patroll State
-The currentState variable plays a pivotal role in the enemy AI's decision-making process, acting as the switchboard between various behavioral states. By default, the AI begins in a Patrolling state upon the player's first encounter with it. This state represents the AI's routine behavior, where it navigates through predefined waypoints or wanders within a designated area.
+The Enemy Patrolling State script is a crucial component of the enemy AI, enabling it to patrol predetermined waypoints in the game environment. This state represents the enemy's default behavior, allowing it to autonomously navigate through specific paths or areas until another condition triggers a state change.
 
-As the game progresses and the player interacts with the AI, the currentState can transition to other states such as Chasing, Attacking, or Death based on the situation. For example, if the player comes within a certain proximity to the enemy, detected by the chaseTriggerDistance, the AI shifts from Patrolling to Chasing, signifying a change in behavior as it actively pursues the player.
+### Core Functionality
 
-This state-switching mechanism is facilitated by a series of conditional checks within the AI's update loop, with transitions triggered by specific game events or conditions being met. The default Patrolling state ensures that the enemy exhibits autonomous behavior, providing a dynamic and engaging experience from the outset of the encounter.
+Waypoint Navigation: The enemy follows a set of predefined waypoints, moving from one to the next in a loop. This behavior is fundamental for simulating routine patrols.
+
+Dynamic Movement: Upon reaching a waypoint, the enemy automatically proceeds to the next one, ensuring continuous movement along the patrol route.
+
+Seamless Transitions: The transition between waypoints is handled smoothly, with the enemy adjusting its direction and movement towards the next target immediately upon reaching a waypoint.
+Key Features
+
+Waypoints Array: A public array of Transforms represents the waypoints. The enemy cycles through these points in sequential order, creating a predictable yet customizable patrol path.
+
+State Entry: The Enter method initializes the patrolling behavior by directing the enemy towards the first waypoint.
+
+Update Logic: Within UpdateState, the script checks if the enemy has reached the current waypoint. If so, it advances to the next waypoint; otherwise, it continues moving towards the current target.
+
+Proximity Check: The ReachedWaypoint method determines when the enemy is close enough to a waypoint to consider it "reached," using a small threshold distance to accommodate for floating-point precision errors.
+
+Movement and Orientation: The movement towards each waypoint is calculated by determining the direction vector from the enemy's current position to the target waypoint. The enemy's movement is then updated to proceed in this direction, leveraging the Move method defined in the EnemyAI script, which abstracts the details of motion and rotation towards the target.
+
+Integration with EnemyAI: The script interacts closely with the EnemyAI component, which manages state transitions and provides a method for movement. This modular design allows for easy adjustments to patrol behavior or integration of additional states into the enemy's AI.
 
 ![PatrollingState](https://github.com/JeremyMarkWilcox/Unity-C-Sharp-Code-Summary/assets/150622088/c547acd4-f892-4031-8929-7baf623e33c2)
 
