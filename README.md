@@ -406,6 +406,9 @@ async void DestroyGameObject()
 
 ## Boss Battle
 
+![BossBatle](https://github.com/JeremyMarkWilcox/Unity-C-Sharp-Code-Summary/assets/150622088/b7c87429-b9ec-48b9-9e4a-c190b7a45983)
+
+
 My second significant achievement in this project was developing the boss battle, an encounter that not only tests the player's skills but also enriches the gaming experience with its complexity and strategic depth.
 
 **Dynamic Enemy Spawning:** The boss summons 8 blue enemies, reminiscent of the previous level's foes but with extended range and adjusted game logic to evoke the classic Space Invaders feel.
