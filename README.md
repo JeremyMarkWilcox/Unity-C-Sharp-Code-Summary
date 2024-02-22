@@ -399,17 +399,60 @@ My second significant achievement in this project was developing the boss battle
 
 **Adaptive Barriers:** Periodically, invisible barriers activate or deactivate, methodically narrowing the space between the minions and the player. This mechanic forces players to make tactical decisions: focus on whittling down the boss's health or clear the swarm of encroaching minions.
 
-###Boss Mechanics
+### Boss Mechanics
 
 **Unpredictable Movement:** The boss shares its movement script with meteorites, resulting in erratic and unpredictable floating patterns. This randomness is a deliberate design choice to balance the gameplay, given the minions' targeted aggression.
 
 **Deadly Laser Attack:** Highlighted by a brief orange flash, the boss's capability to unleash a powerful laser beam introduces critical moments of heightened tension, requiring quick reflexes to avoid devastating damage.
 
-###Climactic Conclusion
+### Climactic Conclusion
 
 **Cathartic Victory:** Defeating the boss triggers the simultaneous destruction of all remaining enemies, amplifying the sense of triumph and dramatically enhancing the game's atmosphere.
 This boss battle stands as a testament to the project's success, incorporating elements that challenge the player's strategic thinking and dexterity while delivering a memorable and rewarding climax.
 
+```
+private IEnumerator FireBeamRoutine()
+{
+    yield return new WaitForSeconds(20f);
+    while (true)
+    {
+        StartCoroutine(WarningEffect());
+
+        yield return new WaitForSeconds(warningDuration);
+
+        bosslasersound.Play();
+        for (int i = 0; i < 10; i++)
+        {
+            FireBeam();
+            yield return new WaitForSeconds(0.05f);
+        }
+        yield return new WaitForSeconds(10f); 
+    }
+}
+
+private IEnumerator WarningEffect()
+{
+    spriteRenderer.color = warningColor;
+
+    yield return new WaitForSeconds(warningDuration);
+
+    spriteRenderer.color = originalColor;
+}
+
+
+void FireBeam()
+{
+    if (beamPrefab && firePoint)
+    {
+        GameObject beam = Instantiate(beamPrefab, firePoint.position, firePoint.rotation);
+        Rigidbody2D rb = beam.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.AddForce(firePoint.up * -1000); 
+        }
+    }      
+}
+```
 
 ## Meteors
 
