@@ -474,19 +474,21 @@ void FireBeam()
 
 ## Player Ship
 
+![PlayerMovement](https://github.com/JeremyMarkWilcox/Unity-C-Sharp-Code-Summary/assets/150622088/c7f12917-8cd9-45d2-a976-d01fde95cef0)
+
 ### Key Features of JW_HeroShip:
 
-Dynamic Movement Control: Players can control the ship's rotation and forward/backward movement using the horizontal and vertical input axes, respectively. The script allows for a smooth transition between movements, ensuring a responsive gaming experience.
+**Dynamic Movement Control:** Players can control the ship's rotation and forward/backward movement using the horizontal and vertical input axes, respectively. The script allows for a smooth transition between movements, ensuring a responsive gaming experience.
 
-Speed and Rotation Limits: It enforces maximum limits on both the ship's speed and rotation speed to prevent excessively fast movements that could make the game unplayable or disorienting.
+**Speed and Rotation Limits:** It enforces maximum limits on both the ship's speed and rotation speed to prevent excessively fast movements that could make the game unplayable or disorienting.
 
-Visual Effects for Movement: The script dynamically enables or disables flame game objects based on the ship's movement. Forward movement activates flames at the rear of the ship, while rotation triggers flames on the corresponding side wings, enhancing the visual feedback and immersion for the player.
+**Visual Effects for Movement:** The script dynamically enables or disables flame game objects based on the ship's movement. Forward movement activates flames at the rear of the ship, while rotation triggers flames on the corresponding side wings, enhancing the visual feedback and immersion for the player.
 
-Deceleration Mechanics: When the player stops inputting movement commands, the ship gradually slows down rather than stopping abruptly, thanks to the linear and rotational deceleration parameters. This feature adds a layer of realism to the ship's handling.
+**Deceleration Mechanics:** When the player stops inputting movement commands, the ship gradually slows down rather than stopping abruptly, thanks to the linear and rotational deceleration parameters. This feature adds a layer of realism to the ship's handling.
 
-Audio Feedback: An AudioSource component plays a booster jet sound effect when the ship is moving, further enriching the player's interaction with the game by providing auditory cues linked to the ship's movement.
+**Audio Feedback:** An AudioSource component plays a booster jet sound effect when the ship is moving, further enriching the player's interaction with the game by providing auditory cues linked to the ship's movement.
 
-Modular and Customizable: The script is designed with customization in mind, featuring serialized fields for easy adjustments to speed, rotation, and deceleration values directly from the Unity Editor. This makes it versatile for various game types and design preferences.
+**Modular and Customizable:** The script is designed with customization in mind, featuring serialized fields for easy adjustments to speed, rotation, and deceleration values directly from the Unity Editor. This makes it versatile for various game types and design preferences.
 
 ```
 using UnityEngine;
