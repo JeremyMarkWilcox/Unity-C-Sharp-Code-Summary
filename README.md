@@ -373,6 +373,21 @@ async void DestroyGameObject()
     Destroy(gameObject);
 }
 ```
+### How I implemented enemy movement:
+
+```
+ public void Move(Vector2 direction)
+ {
+     direction.Normalize();
+     rb.velocity = direction * speed;
+
+     float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+     angle -= -90f;
+
+     transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+ }
+```
 
 ## Meteors
 
