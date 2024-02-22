@@ -310,6 +310,23 @@ public class EnemyAttackState : MonoBehaviour
 
 The Death state, as encapsulated within the StartDeath, Explode, and DestroyGameObject methods of the enemy AI system, signifies the final phase in the enemy's lifecycle. This state is triggered when the enemy's health reaches zero, leading to a sequence of events culminating in the enemy's removal from the game. It is included in the AI Script because it is very brief. The main reason I created the state was because I realized all of the code I had been writing to prevent the other states from triggering such as attacking. This shuts it all down and the poor Enemy AI can die in peace.
 
+```
+public void StartDeath()
+{
+    currentState = State.Death;
+    Explode();
+}
+```
+
+```
+async void Explode()
+{
+    isExploding = true;
+    await Task.Delay(250);
+    DestroyGameObject();
+}
+```
+
 ## Meteors
 
 ## Player Ship
