@@ -75,6 +75,9 @@ Utilizing Unity's physics and asynchronous programming, the FSM enhances gamepla
  }
 ```
 ## Patroll State
+
+![PatrollingState](https://github.com/JeremyMarkWilcox/Unity-C-Sharp-Code-Summary/assets/150622088/c547acd4-f892-4031-8929-7baf623e33c2)
+
 The Enemy Patrolling State script is a crucial component of the enemy AI, enabling it to patrol predetermined waypoints in the game environment. This state represents the enemy's default behavior, allowing it to autonomously navigate through specific paths or areas until another condition triggers a state change.
 
 ### Core Functionality
@@ -98,7 +101,7 @@ Key Features
 
 **Integration with EnemyAI:** The script interacts closely with the EnemyAI component, which manages state transitions and provides a method for movement. This modular design allows for easy adjustments to patrol behavior or integration of additional states into the enemy's AI.
 
-![PatrollingState](https://github.com/JeremyMarkWilcox/Unity-C-Sharp-Code-Summary/assets/150622088/c547acd4-f892-4031-8929-7baf623e33c2)
+
 
 ```
 using UnityEngine;
@@ -218,7 +221,8 @@ public class EnemyChasingState : MonoBehaviour
 
 ## Attack State
 
-![ChaseState](https://github.com/JeremyMarkWilcox/Unity-C-Sharp-Code-Summary/assets/150622088/39f512ba-8afe-4c2f-91e1-c9d47b6c1614)
+![AttackState](https://github.com/JeremyMarkWilcox/Unity-C-Sharp-Code-Summary/assets/150622088/b274b061-e21f-48d1-b1d4-61783f582414)
+
 
 
 The EnemyAttackState script empowers the enemy AI with the capability to engage the player by firing projectiles when within a certain distance. This state is pivotal for adding combat dynamics to the game, making encounters with the enemy more challenging and interactive.
