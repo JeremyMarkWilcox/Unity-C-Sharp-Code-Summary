@@ -76,24 +76,24 @@ The Enemy Patrolling State script is a crucial component of the enemy AI, enabli
 
 ### Core Functionality
 
-Waypoint Navigation: The enemy follows a set of predefined waypoints, moving from one to the next in a loop. This behavior is fundamental for simulating routine patrols.
+**Waypoint Navigation:** The enemy follows a set of predefined waypoints, moving from one to the next in a loop. This behavior is fundamental for simulating routine patrols.
 
-Dynamic Movement: Upon reaching a waypoint, the enemy automatically proceeds to the next one, ensuring continuous movement along the patrol route.
+**Dynamic Movement:** Upon reaching a waypoint, the enemy automatically proceeds to the next one, ensuring continuous movement along the patrol route.
 
-Seamless Transitions: The transition between waypoints is handled smoothly, with the enemy adjusting its direction and movement towards the next target immediately upon reaching a waypoint.
+**Seamless Transitions:** The transition between waypoints is handled smoothly, with the enemy adjusting its direction and movement towards the next target immediately upon reaching a waypoint.
 Key Features
 
-Waypoints Array: A public array of Transforms represents the waypoints. The enemy cycles through these points in sequential order, creating a predictable yet customizable patrol path.
+**Waypoints Array:** A public array of Transforms represents the waypoints. The enemy cycles through these points in sequential order, creating a predictable yet customizable patrol path.
 
-State Entry: The Enter method initializes the patrolling behavior by directing the enemy towards the first waypoint.
+**State Entry:** The Enter method initializes the patrolling behavior by directing the enemy towards the first waypoint.
 
-Update Logic: Within UpdateState, the script checks if the enemy has reached the current waypoint. If so, it advances to the next waypoint; otherwise, it continues moving towards the current target.
+**Update Logic:** Within UpdateState, the script checks if the enemy has reached the current waypoint. If so, it advances to the next waypoint; otherwise, it continues moving towards the current target.
 
-Proximity Check: The ReachedWaypoint method determines when the enemy is close enough to a waypoint to consider it "reached," using a small threshold distance to accommodate for floating-point precision errors.
+**Proximity Check:** The ReachedWaypoint method determines when the enemy is close enough to a waypoint to consider it "reached," using a small threshold distance to accommodate for floating-point precision errors.
 
-Movement and Orientation: The movement towards each waypoint is calculated by determining the direction vector from the enemy's current position to the target waypoint. The enemy's movement is then updated to proceed in this direction, leveraging the Move method defined in the EnemyAI script, which abstracts the details of motion and rotation towards the target.
+**Movement and Orientation:** The movement towards each waypoint is calculated by determining the direction vector from the enemy's current position to the target waypoint. The enemy's movement is then updated to proceed in this direction, leveraging the Move method defined in the EnemyAI script, which abstracts the details of motion and rotation towards the target.
 
-Integration with EnemyAI: The script interacts closely with the EnemyAI component, which manages state transitions and provides a method for movement. This modular design allows for easy adjustments to patrol behavior or integration of additional states into the enemy's AI.
+**Integration with EnemyAI:** The script interacts closely with the EnemyAI component, which manages state transitions and provides a method for movement. This modular design allows for easy adjustments to patrol behavior or integration of additional states into the enemy's AI.
 
 ![PatrollingState](https://github.com/JeremyMarkWilcox/Unity-C-Sharp-Code-Summary/assets/150622088/c547acd4-f892-4031-8929-7baf623e33c2)
 
