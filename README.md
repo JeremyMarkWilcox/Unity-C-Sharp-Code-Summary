@@ -329,7 +329,7 @@ async void Explode()
 
 ## Additional Mentions
 
-How I implemented the enemy taking damage:
+### How I implemented the enemy taking damage:
 ```
  private void OnTriggerEnter2D(Collider2D other)
  {
@@ -353,6 +353,25 @@ How I implemented the enemy taking damage:
          StartDeath();
      }
  }
+```
+### How I implemented the enemy dropping an item:
+
+```
+async void DestroyGameObject()
+{
+    enemydeath.Play();
+    float randomNumber = Random.value;
+
+    if (randomNumber < dropChance)
+    {
+        Instantiate(Lifeup, transform.position, Quaternion.identity);
+    }
+
+    Instantiate(escapePodPrefab, transform.position, Quaternion.identity);
+    Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+    await Task.Delay(50);
+    Destroy(gameObject);
+}
 ```
 
 ## Meteors
