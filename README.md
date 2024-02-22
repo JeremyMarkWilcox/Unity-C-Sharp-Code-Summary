@@ -201,6 +201,10 @@ Projectile rotation is adjusted to align with the shooting direction, providing 
 The script meticulously manages the timing between shots, incorporating an aiming delay to simulate preparation time for each attack, making the enemy's behavior more predictable and allowing players to strategize.
 
 
+## Death State
+
+The Death state, as encapsulated within the StartDeath, Explode, and DestroyGameObject methods of the enemy AI system, signifies the final phase in the enemy's lifecycle. This state is triggered when the enemy's health reaches zero, leading to a sequence of events culminating in the enemy's removal from the game. It is included in the AI Script because it is very brief. The main reason I created the state was because I realized all of the code I had been writing to prevent the other states from triggering such as attacking. This shuts it all down and the poor Enemy AI can die in peace.
+
 ## Meteors
 
 ## Player Ship
