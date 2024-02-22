@@ -157,21 +157,21 @@ The Chasing state, as defined in the Enemy Chasing State script, orchestrates th
 
 ### Functionality
 
-Target Acquisition: The script requires a target, typically the player, which is set through the SetTarget method. This allows the enemy to dynamically focus on the player regardless of their position in the game world.
+**Target Acquisition:** The script requires a target, typically the player, which is set through the SetTarget method. This allows the enemy to dynamically focus on the player regardless of their position in the game world.
 
-Movement: Upon each frame update, the enemy calculates the direction to the target and moves towards it at a specified speed (speed), ensuring a continuous pursuit.
+**Movement:** Upon each frame update, the enemy calculates the direction to the target and moves towards it at a specified speed (speed), ensuring a continuous pursuit.
 
-Distance Maintenance: While the script doesn't explicitly enforce maintaining a set distance from the player (maintainDistance), this value could be used to modify behavior, such as transitioning to an attack state or adjusting pursuit speed to avoid getting too close or too far.
+**Distance Maintenance:** While the script doesn't explicitly enforce maintaining a set distance from the player (maintainDistance), this value could be used to modify behavior, such as transitioning to an attack state or adjusting pursuit speed to avoid getting too close or too far.
 
-Rotation: The enemy rotates to face the player as it moves, creating a more lifelike and engaging pursuit. This rotation is smoothly handled to always orient the enemy towards the player, enhancing visual fidelity.
+**Rotation:** The enemy rotates to face the player as it moves, creating a more lifelike and engaging pursuit. This rotation is smoothly handled to always orient the enemy towards the player, enhancing visual fidelity.
 
 ### Key Aspects
 
-Adaptive Pursuit: The script ensures the enemy can adapt its chase in real-time to the player's movements, providing a realistic and responsive AI behavior.
+**Adaptive Pursuit:** The script ensures the enemy can adapt its chase in real-time to the player's movements, providing a realistic and responsive AI behavior.
 
-Error Handling: It includes a safeguard against a missing target, which logs a warning. This feature aids in debugging and ensures the game remains robust against unexpected errors.
+**Error Handling:** It includes a safeguard against a missing target, which logs a warning. This feature aids in debugging and ensures the game remains robust against unexpected errors.
 
-Efficient Targeting: Through normalization of the direction vector and the use of quaternion rotation, the script ensures efficient and smooth pursuit mechanics.
+**Efficient Targeting:** Through normalization of the direction vector and the use of quaternion rotation, the script ensures efficient and smooth pursuit mechanics.
 
 
 ## Attack State
@@ -180,21 +180,21 @@ The EnemyAttackState script empowers the enemy AI with the capability to engage 
 
 ### Core Mechanics
 
-Target Acquisition: The enemy locks onto a target, typically the player, to determine the direction and timing of attacks.
+**Target Acquisition:** The enemy locks onto a target, typically the player, to determine the direction and timing of attacks.
 
-Projectile Firing: Upon meeting certain conditions, such as being within a specified range (maxFireDistance) and observing a cooldown period (shootInterval), the enemy fires a projectile towards the target.
+**Projectile Firing:** Upon meeting certain conditions, such as being within a specified range (maxFireDistance) and observing a cooldown period (shootInterval), the enemy fires a projectile towards the target.
 
-Aiming and Cooldown Management: The script incorporates an aiming mechanism, simulating a brief aiming period (aimingTime) before each shot, adding realism to the enemy's attack pattern. The lastShootTime tracks the time since the last shot was fired to enforce shooting intervals.
+**Aiming and Cooldown Management:** The script incorporates an aiming mechanism, simulating a brief aiming period (aimingTime) before each shot, adding realism to the enemy's attack pattern. The lastShootTime tracks the time since the last shot was fired to enforce shooting intervals.
 
 ### Key Features
 
-Distance Check: The enemy AI checks the distance to the target before initiating an attack, ensuring that attacks are only made when the player is within effective range.
+**Distance Check:** The enemy AI checks the distance to the target before initiating an attack, ensuring that attacks are only made when the player is within effective range.
 
-Projectile Instantiation: The script creates a projectile instance from a prefab (projectilePrefab) at the firePoint location, with the direction and speed set towards the target.
+**Projectile Instantiation:** The script creates a projectile instance from a prefab (projectilePrefab) at the firePoint location, with the direction and speed set towards the target.
 
-Sound Effects: An audio cue is played with each shot, enhancing the feedback and immersion of combat interactions.
+**Sound Effects:** An audio cue is played with each shot, enhancing the feedback and immersion of combat interactions.
 
-Projectile Lifespan: Projectiles are automatically destroyed after a certain duration (projectileDuration), preventing overaccumulation in the game scene.
+**Projectile Lifespan:** Projectiles are automatically destroyed after a certain duration (projectileDuration), preventing overaccumulation in the game scene.
 
 ### Implementation Details
 
