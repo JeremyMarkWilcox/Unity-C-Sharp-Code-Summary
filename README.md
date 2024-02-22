@@ -327,6 +327,34 @@ async void Explode()
 }
 ```
 
+## Additional Mentions
+
+How I implemented the enemy taking damage:
+```
+ private void OnTriggerEnter2D(Collider2D other)
+ {
+     if (canTrigger && canTakeDamage)
+     {
+         if (other.CompareTag("Player") || other.CompareTag("Projectile"))
+         {
+             animator.SetTrigger("EnemyHit");
+             LoseLife();
+             enemydamagesound.Play();
+         }
+     }
+ }
+
+ void LoseLife()
+ {
+     remainingLives--;
+     if (remainingLives <= 0 && !isExploding)
+     {
+         isExploding = true;
+         StartDeath();
+     }
+ }
+```
+
 ## Meteors
 
 ## Player Ship
