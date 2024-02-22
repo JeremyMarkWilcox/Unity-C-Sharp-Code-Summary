@@ -136,7 +136,7 @@ public class EnemyPatrollingState : MonoBehaviour
 
 The Chasing state, as defined in the Enemy Chasing State script, orchestrates the enemy's behavior when it has detected and is actively pursuing the player. This script is a vital component of the enemy AI's ability to engage with the player in a dynamic and challenging manner.
 
-# Functionality
+### Functionality
 
 Target Acquisition: The script requires a target, typically the player, which is set through the SetTarget method. This allows the enemy to dynamically focus on the player regardless of their position in the game world.
 
@@ -146,7 +146,7 @@ Distance Maintenance: While the script doesn't explicitly enforce maintaining a 
 
 Rotation: The enemy rotates to face the player as it moves, creating a more lifelike and engaging pursuit. This rotation is smoothly handled to always orient the enemy towards the player, enhancing visual fidelity.
 
-# Key Aspects
+### Key Aspects
 
 Adaptive Pursuit: The script ensures the enemy can adapt its chase in real-time to the player's movements, providing a realistic and responsive AI behavior.
 
