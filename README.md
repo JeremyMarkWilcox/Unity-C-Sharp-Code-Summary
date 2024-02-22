@@ -13,9 +13,6 @@ Enclosed are snippets from my code contributions, with the complete codebase acc
 
 Here is a link to my portfolio where you can play the mini game in full:
 
-
-## Game Scenes
-
 ## Enemy AI/ Finite State Machine
 
 Enemy AI Finite State Machine (FSM) Summary
@@ -72,7 +69,7 @@ Utilizing Unity's physics and asynchronous programming, the FSM enhances gamepla
      }
  }
 ```
-### Patroll State
+## Patroll State
 The currentState variable plays a pivotal role in the enemy AI's decision-making process, acting as the switchboard between various behavioral states. By default, the AI begins in a Patrolling state upon the player's first encounter with it. This state represents the AI's routine behavior, where it navigates through predefined waypoints or wanders within a designated area.
 
 As the game progresses and the player interacts with the AI, the currentState can transition to other states such as Chasing, Attacking, or Death based on the situation. For example, if the player comes within a certain proximity to the enemy, detected by the chaseTriggerDistance, the AI shifts from Patrolling to Chasing, signifying a change in behavior as it actively pursues the player.
@@ -135,22 +132,27 @@ public class EnemyPatrollingState : MonoBehaviour
 }
 ```
 
-### Chase State
+## Chase State
 
 The Chasing state, as defined in the Enemy Chasing State script, orchestrates the enemy's behavior when it has detected and is actively pursuing the player. This script is a vital component of the enemy AI's ability to engage with the player in a dynamic and challenging manner.
 
-Functionality
+# Functionality
+
 Target Acquisition: The script requires a target, typically the player, which is set through the SetTarget method. This allows the enemy to dynamically focus on the player regardless of their position in the game world.
+
 Movement: Upon each frame update, the enemy calculates the direction to the target and moves towards it at a specified speed (speed), ensuring a continuous pursuit.
+
 Distance Maintenance: While the script doesn't explicitly enforce maintaining a set distance from the player (maintainDistance), this value could be used to modify behavior, such as transitioning to an attack state or adjusting pursuit speed to avoid getting too close or too far.
+
 Rotation: The enemy rotates to face the player as it moves, creating a more lifelike and engaging pursuit. This rotation is smoothly handled to always orient the enemy towards the player, enhancing visual fidelity.
-Key Aspects
+
+# Key Aspects
+
 Adaptive Pursuit: The script ensures the enemy can adapt its chase in real-time to the player's movements, providing a realistic and responsive AI behavior.
+
 Error Handling: It includes a safeguard against a missing target, which logs a warning. This feature aids in debugging and ensures the game remains robust against unexpected errors.
+
 Efficient Targeting: Through normalization of the direction vector and the use of quaternion rotation, the script ensures efficient and smooth pursuit mechanics.
-
-
-
 
 
 
@@ -160,7 +162,7 @@ Efficient Targeting: Through normalization of the direction vector and the use o
 
 ## Player Ship
 
-
+## Game Scenes
 
 
 
