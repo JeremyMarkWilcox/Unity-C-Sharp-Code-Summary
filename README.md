@@ -476,7 +476,7 @@ void FireBeam()
 
 ![PlayerMovement](https://github.com/JeremyMarkWilcox/Unity-C-Sharp-Code-Summary/assets/150622088/c7f12917-8cd9-45d2-a976-d01fde95cef0)
 
-### Key Features of JW_HeroShip:
+### Key Features of JW_HeroShip Movement:
 
 **Dynamic Movement Control:** Players can control the ship's rotation and forward/backward movement using the horizontal and vertical input axes, respectively. The script allows for a smooth transition between movements, ensuring a responsive gaming experience.
 
