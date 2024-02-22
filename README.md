@@ -172,7 +172,33 @@ Error Handling: It includes a safeguard against a missing target, which logs a w
 Efficient Targeting: Through normalization of the direction vector and the use of quaternion rotation, the script ensures efficient and smooth pursuit mechanics.
 
 
+## Attack State
 
+The EnemyAttackState script empowers the enemy AI with the capability to engage the player by firing projectiles when within a certain distance. This state is pivotal for adding combat dynamics to the game, making encounters with the enemy more challenging and interactive.
+
+### Core Mechanics
+
+Target Acquisition: The enemy locks onto a target, typically the player, to determine the direction and timing of attacks.
+
+Projectile Firing: Upon meeting certain conditions, such as being within a specified range (maxFireDistance) and observing a cooldown period (shootInterval), the enemy fires a projectile towards the target.
+
+Aiming and Cooldown Management: The script incorporates an aiming mechanism, simulating a brief aiming period (aimingTime) before each shot, adding realism to the enemy's attack pattern. The lastShootTime tracks the time since the last shot was fired to enforce shooting intervals.
+
+### Key Features
+
+Distance Check: The enemy AI checks the distance to the target before initiating an attack, ensuring that attacks are only made when the player is within effective range.
+
+Projectile Instantiation: The script creates a projectile instance from a prefab (projectilePrefab) at the firePoint location, with the direction and speed set towards the target.
+
+Sound Effects: An audio cue is played with each shot, enhancing the feedback and immersion of combat interactions.
+
+Projectile Lifespan: Projectiles are automatically destroyed after a certain duration (projectileDuration), preventing overaccumulation in the game scene.
+
+### Implementation Details
+
+The shooting direction is calculated based on the target's position relative to the fire point, ensuring that projectiles are aimed accurately.
+Projectile rotation is adjusted to align with the shooting direction, providing a more visually coherent attack.
+The script meticulously manages the timing between shots, incorporating an aiming delay to simulate preparation time for each attack, making the enemy's behavior more predictable and allowing players to strategize.
 
 
 ## Meteors
