@@ -15,13 +15,15 @@ Here is a link to my portfolio where you can play the mini game in full:
 
 ## Enemy AI/ Finite State Machine
 
-Enemy AI Finite State Machine (FSM) Summary
 The EnemyAI component implements a finite state machine (FSM) to dynamically control enemy behavior in four key states: Patrolling, Chasing, Attacking, and Death. This system allows the enemy AI to seamlessly transition between behaviors based on player proximity and interactions:
 
-Initialization: Begins in Patrolling, roaming the area.
-Player Detection: Transitions to Chasing when the player is detected within a certain range.
-Close Proximity: Switches to Attacking to engage the player upon getting close enough.
-Taking Damage: Handles taking damage and triggers the Death state upon health depletion, leading to an explosion effect and the enemy's destruction.
+**Initialization:** Begins in Patrolling, roaming the area.
+
+**Player Detection:** Transitions to Chasing when the player is detected within a certain range.
+
+**Close Proximity:** Switches to Attacking to engage the player upon getting close enough.
+
+**Taking Damage:** Handles taking damage and triggers the Death state upon health depletion, leading to an explosion effect and the enemy's destruction.
 Utilizing Unity's physics and asynchronous programming, the FSM enhances gameplay with adaptive and challenging enemy behaviors. Each state is modular, encapsulated in its own script for clarity and ease of modification.
 
 ```
