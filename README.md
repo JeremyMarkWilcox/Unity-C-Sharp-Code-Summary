@@ -619,6 +619,23 @@ public class JW_HeroShip : MonoBehaviour
     }
 }
 ```
+### Key Features of JW_HeroShipCollisions:
+
+**Collision Detection:** Utilizes Unity's OnTriggerEnter2D method to detect collisions with objects tagged as "Destroyable," "Wall," "Enemy," or "Boundary." Each type of collision is handled differently, affecting the ship's lives or providing player feedback.
+
+**Damage Management:** The ship takes damage based on specific conditions, such as colliding with an enemy or hitting a wall with sufficient velocity. The script includes a minimum velocity check to ensure that damage is only taken from significant impacts, adding a layer of realism to the collision effects.
+
+**Lives System:** The ship starts with a predefined number of lives (maxHits), which are decremented upon taking damage. The remaining lives are displayed to the player via a TextMeshProUGUI element, providing clear feedback on the ship's status.
+
+**Damage Cooldown:** Implements a cooldown period (damageCooldown) after taking damage during which the ship is temporarily invulnerable. This prevents rapid successive damage from quickly depleting the ship's lives.
+
+**Visual and Audio Feedback:** Integrates with Unity's Animator and AudioSource components to play animations and sound effects corresponding to taking damage or exploding, enhancing the player's immersive experience.
+
+**Game Over Handling:** Triggers a game over sequence by playing an explosion sound, deactivating child game objects to visually represent destruction, and loading a "Game Over" scene after a brief delay, marking the end of the game session.
+
+**Boundary Feedback:** Provides visual feedback when the ship attempts to leave the designated play area by displaying a warning message for a short period.
+
+**Modularity and Customization:** The script is designed to be flexible and easily integrated into various game projects. It allows for easy adjustments of key parameters like damage cooldown, minimum damage velocity, and maximum hits through serialized fields in the Unity Editor.
 
 ## Meteors
 
