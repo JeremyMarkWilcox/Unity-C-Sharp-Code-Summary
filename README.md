@@ -838,9 +838,7 @@ public class JW_HeroShip_Projectiles : MonoBehaviour
 }
 ```
 
-## Meteors
-
-## Game Scenes
+### There are more in the code folders!
 
 
 
