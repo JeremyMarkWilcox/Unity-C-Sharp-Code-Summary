@@ -785,6 +785,8 @@ public class JW_HeroShipCollisions : MonoBehaviour
 
 ### JW_HeroShip_Projectiles Key Features:
 
+![Projectiles](https://github.com/JeremyMarkWilcox/Unity-C-Sharp-Code-Summary/assets/150622088/a93224c9-f2ee-462c-bc5c-23b2a27e2346)
+
 **Projectile Firing:** Enables the spaceship to fire projectiles. When the player presses the space key, a projectile is instantiated at the spaceship's position, moving in the direction the ship is facing.
 
 **Projectile Properties:** The script defines several key properties for the projectiles, including their speed (projectileSpeed), the lifespan (projectileDuration), and the prefab to be used (projectilePrefab). These properties allow for easy adjustments to fit different game designs.
