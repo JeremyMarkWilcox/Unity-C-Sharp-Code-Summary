@@ -783,6 +783,19 @@ public class JW_HeroShipCollisions : MonoBehaviour
 ```
 
 
+### JW_HeroShip_Projectiles Key Features:
+
+**Projectile Firing:** Enables the spaceship to fire projectiles. When the player presses the space key, a projectile is instantiated at the spaceship's position, moving in the direction the ship is facing.
+
+**Projectile Properties:** The script defines several key properties for the projectiles, including their speed (projectileSpeed), the lifespan (projectileDuration), and the prefab to be used (projectilePrefab). These properties allow for easy adjustments to fit different game designs.
+
+**Fire Rate Control:** Incorporates a firing rate (fireRate) mechanism to prevent continuous shooting and ensure gameplay balance. The nextFireTime variable tracks when the next shot can be fired, creating a delay between shots.
+
+**Audio Feedback:** Integrates with an AudioSource (laserSound) to play a sound effect whenever a projectile is fired, enhancing the player's experience by providing immediate auditory feedback on their actions.
+
+**Projectile Movement:** Applies a force to the projectile's Rigidbody2D component in the direction the ship is facing, propelling the projectile forward at the specified speed using an impulse force. This creates a dynamic and realistic projectile movement.
+
+**Automatic Destruction:** Automatically destroys the projectile after a set duration (projectileDuration), ensuring that the game environment is not cluttered with indefinitely persisting projectiles. This is important for performance optimization and gameplay balance.
 
 
 ## Meteors
