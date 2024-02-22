@@ -621,6 +621,9 @@ public class JW_HeroShip : MonoBehaviour
 ```
 ### Key Features of JW_HeroShipCollisions:
 
+![Collision](https://github.com/JeremyMarkWilcox/Unity-C-Sharp-Code-Summary/assets/150622088/9b6ffd5d-a664-4bd2-bd37-0631e67075f3)
+
+
 **Collision Detection:** Utilizes Unity's OnTriggerEnter2D method to detect collisions with objects tagged as "Destroyable," "Wall," "Enemy," or "Boundary." Each type of collision is handled differently, affecting the ship's lives or providing player feedback.
 
 **Damage Management:** The ship takes damage based on specific conditions, such as colliding with an enemy or hitting a wall with sufficient velocity. The script includes a minimum velocity check to ensure that damage is only taken from significant impacts, adding a layer of realism to the collision effects.
