@@ -15,6 +15,9 @@ Here is a link to my portfolio where you can play the mini game in full:
 
 ## Enemy AI/ Finite State Machine
 
+![EnemyAI](https://github.com/JeremyMarkWilcox/Unity-C-Sharp-Code-Summary/assets/150622088/7d8ded98-20b3-44ed-81fe-451b4ea68919)
+
+
 The EnemyAI component implements a finite state machine (FSM) to dynamically control enemy behavior in four key states: Patrolling, Chasing, Attacking, and Death. This system allows the enemy AI to seamlessly transition between behaviors based on player proximity and interactions:
 
 **Initialization:** Begins in Patrolling, roaming the area.
@@ -152,6 +155,9 @@ public class EnemyPatrollingState : MonoBehaviour
 ```
 
 ## Chase State
+
+![ChaseState](https://github.com/JeremyMarkWilcox/Unity-C-Sharp-Code-Summary/assets/150622088/9f13b94b-45d2-484d-ba96-47eaa92685b7)
+
 
 The Chasing state, as defined in the Enemy Chasing State script, orchestrates the enemy's behavior when it has detected and is actively pursuing the player. This script is a vital component of the enemy AI's ability to engage with the player in a dynamic and challenging manner.
 
