@@ -218,6 +218,9 @@ public class EnemyChasingState : MonoBehaviour
 
 ## Attack State
 
+![ChaseState](https://github.com/JeremyMarkWilcox/Unity-C-Sharp-Code-Summary/assets/150622088/39f512ba-8afe-4c2f-91e1-c9d47b6c1614)
+
+
 The EnemyAttackState script empowers the enemy AI with the capability to engage the player by firing projectiles when within a certain distance. This state is pivotal for adding combat dynamics to the game, making encounters with the enemy more challenging and interactive.
 
 ### Core Mechanics
